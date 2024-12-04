@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 데이터소스 라우팅 관련 로깅 -->
+    <logger name="com.example.dataroutetest.config.RoutingDataSource" level="DEBUG"/>
+    
+    <!-- MyBatis SQL 로깅 -->
+    <logger name="com.example.dataroutetest.mapper" level="DEBUG"/>
+    
+    <!-- 트랜잭션 관련 로깅 -->
+    <logger name="org.springframework.transaction" level="DEBUG"/>
+    <logger name="org.springframework.jdbc.datasource" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

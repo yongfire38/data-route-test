@@ -1,0 +1,11 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    hikari:
+      maximum-pool-size: 4
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
